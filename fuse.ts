@@ -67,6 +67,12 @@ const ctx = {
       instructions: 'index.js',
     });
 
+    fuse.register('returnof', {
+      homeDir: 'node_modules/returnof',
+      main: 'lib/returnof.js',
+      instructions: '*.js',
+    });
+
     if (!this.isProduction) {
       app.watch();
       app.hmr();

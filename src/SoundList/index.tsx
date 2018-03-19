@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { WithStyles, withStyles, Paper } from 'material-ui';
+import { WithStyles, withStyles } from 'material-ui';
 import { Styles, ClassNames } from './style';
 import { Sound } from '../Sound';
 
@@ -10,7 +10,7 @@ interface Props {
 export const SoundList: React.ComponentType<Props> = withStyles(Styles)(
   function SoundList({ classes, sounds }: Props & WithStyles<ClassNames>) {
     return (
-      <Paper className={classes.SoundList}>
+      <div className={classes.SoundList}>
         <ul className={classes.List}>
           {
             sounds.map((sound, index) => (
@@ -20,7 +20,7 @@ export const SoundList: React.ComponentType<Props> = withStyles(Styles)(
             ))
           }
         </ul>
-      </Paper>
+      </div>
     );
   },
 );

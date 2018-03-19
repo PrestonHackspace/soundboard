@@ -9,6 +9,10 @@ interface Props {
 
 export const Sound: React.ComponentType<Props> = withStyles(Styles)(
   function SoundList({ classes, sound }: Props & WithStyles<keyof typeof Styles>) {
+    function play() {
+      console.log('play', sound);
+    }
+
     return (
       <Paper className={classes.Sound}>
         <div className={classes.Thumbnail}>
@@ -20,7 +24,7 @@ export const Sound: React.ComponentType<Props> = withStyles(Styles)(
         </div>
 
         <div className={classes.Controls}>
-          <IconLink tooltip='Play' type='play' />
+          <IconLink tooltip='Play' type='play' onClick={play} />
           <IconLink tooltip='Stop' type='stop' />
         </div>
       </Paper>
