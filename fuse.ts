@@ -1,6 +1,6 @@
-import { FuseBox, Sparky, WebIndexPlugin, SVGPlugin, CSSPlugin, QuantumPlugin, Plugin, WorkFlowContext } from 'fuse-box/dist';
-import { src, task, watch, context, fuse } from 'fuse-box/dist/sparky';
-import { BundleWriter } from 'fuse-box/dist/quantum/plugin/BundleWriter';
+import { FuseBox, Sparky, WebIndexPlugin, SVGPlugin, CSSPlugin, QuantumPlugin, Plugin, WorkFlowContext } from 'fuse-box';
+import { src, task, watch, context, fuse } from 'fuse-box/sparky';
+import { BundleWriter } from 'fuse-box/quantum/plugin/BundleWriter';
 
 const ctx = {
   isProduction: false,
